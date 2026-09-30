@@ -723,7 +723,7 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
   const go = () => {
     if (started) return;
     audio.currentTime = 0;
-    audio.volume = 1;
+    audio.volume = .25;
     audio.play().then(() => {
       if (started) return;
       started = true;
