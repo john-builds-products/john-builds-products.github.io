@@ -737,7 +737,7 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
   const TRIGGERS = ["pointerdown", "keydown", "touchend", "mousemove", "wheel", "scroll"];
   let started = false;
 
-  const VOLUME = 0.15; // 0 = silent, 1 = full
+  const VOLUME = 0.015; // 0 = silent, 1 = full
 
   audio.addEventListener("playing", () => document.body.classList.add("is-metal"));
 
