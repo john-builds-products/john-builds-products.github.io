@@ -346,15 +346,9 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
 .client .as { font-weight: 400; color: var(--muted); }
 .eng-head .dates { font-weight: 400; }
 
-/* ---------- client names: redacted, badly. The marker is too thin to hide anything,
-   runs crooked and stops short, so every name is still readable. ---------- */
-.redact { position: relative; white-space: nowrap; }
-.redact::after {
-  content: ""; position: absolute; left: -3px; right: 6px; top: 10%; height: 78%;
-  background: var(--ink); opacity: .5; transform: rotate(-.7deg); pointer-events: none;
-}
-.redact.r2::after { left: 6px; right: -4px; top: 14%; height: 72%; opacity: .42; transform: rotate(.6deg); }
-.redact.r3::after { left: -3px; right: 14%; top: 8%; height: 80%; opacity: .58; transform: rotate(-.3deg); }
+/* ---------- client names: actually redacted. The covered letters are block characters
+   in the text itself; the marker just missed a letter or two at the ends. ---------- */
+.redact { white-space: nowrap; letter-spacing: -0.04em; }
 .project { margin: 2px 0 0; font-size: 0.85rem; color: var(--muted); }
 .bullets { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
 .bullets li { position: relative; padding-left: 16px; }
@@ -443,7 +437,6 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
   }
   .page { max-width: none; padding: 0; gap: 22px; }
   .copy, .tl-tip, .band, #encore, .lyrics, .boombox { display: none !important; }
-  .redact::after { display: none; }
   .job-head, .eng { break-inside: avoid; }
   a { text-decoration: none; }
 }
@@ -560,7 +553,7 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
             </section>
             <section class="eng">
               <header class="eng-head">
-                <h4 class="client"><span class="redact">Boston Consulting Group</span> <span class="as">· LLM Engineer</span></h4>
+                <h4 class="client"><span class="redact" aria-label="redacted client name">██████████████████████p</span> <span class="as">· LLM Engineer</span></h4>
                 <p class="dates">Apr 2025 – Mar 2026</p>
               </header>
               <p class="project">Amplify Impact AI accelerator · Cost Explorer &amp; DCG Microspaces tools</p>
@@ -585,7 +578,7 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
           <div class="engs">
             <section class="eng">
               <header class="eng-head">
-                <h4 class="client"><span class="redact r2">Honda of America</span></h4>
+                <h4 class="client"><span class="redact" aria-label="redacted client name">H███████████████</span></h4>
                 <p class="dates">2024</p>
               </header>
               <ul class="bullets">
@@ -599,7 +592,7 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
             </section>
             <section class="eng">
               <header class="eng-head">
-                <h4 class="client"><span class="redact r3">George Lehman Group</span></h4>
+                <h4 class="client"><span class="redact" aria-label="redacted client name">███████████████roup</span></h4>
                 <p class="dates">2024</p>
               </header>
               <ul class="bullets">
@@ -623,7 +616,7 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
             </section>
             <section class="eng">
               <header class="eng-head">
-                <h4 class="client"><span class="redact r2">Reece</span></h4>
+                <h4 class="client"><span class="redact" aria-label="redacted client name">R████</span></h4>
                 <p class="dates">2023</p>
               </header>
               <ul class="bullets">
@@ -633,12 +626,12 @@ a:hover { color: var(--ink); text-decoration-color: currentColor; }
             </section>
             <section class="eng">
               <header class="eng-head">
-                <h4 class="client"><span class="redact r3">Boston Consulting Group</span></h4>
+                <h4 class="client"><span class="redact" aria-label="redacted client name">███████████████████roup</span></h4>
                 <p class="dates">2022</p>
               </header>
-              <p class="project">Embedded under the <span class="redact r2">BCG</span> banner for end clients <span class="redact">Insight</span> and <span class="redact r3">Humana CenterWell Pharmacy</span></p>
+              <p class="project">Embedded under the <span class="redact" aria-label="redacted client name">B██</span> banner for end clients <span class="redact" aria-label="redacted client name">██████t</span> and <span class="redact" aria-label="redacted client name">█████████████████████rmacy</span></p>
               <ul class="bullets">
-                <li>Built <span class="redact r2">Humana CenterWell Pharmacy</span>’s React components in Storybook</li>
+                <li>Built <span class="redact" aria-label="redacted client name">H█████████████████████████</span>’s React components in Storybook</li>
                 <li>Integrated the React components with an SAP CMS</li>
               </ul>
             </section>
